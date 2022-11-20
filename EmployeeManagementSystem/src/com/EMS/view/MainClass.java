@@ -46,6 +46,27 @@ public class MainClass {
 			   break;
 			   }
 		   case 2: {
+			   System.out.println("Enter Emp ID");
+			   int empID = sc.nextInt();
+			   System.out.println("Enter Name");
+			   sc.nextLine();
+			   String name = sc.nextLine();
+			   System.out.println("Enter Salary");
+			   float salary = sc.nextFloat();
+			   
+			   EmployeeBean emp = new EmployeeBean();
+			   emp.setEmpId(empID);
+			   emp.setName(name);
+			   emp.setSalary(salary);
+			  boolean status =  ac.updateEmpDetails(empID, emp);
+			   if(status)
+			   {
+				   System.out.println("Record modified successfully");
+			   }
+			   else
+			   {
+				   System.out.println("Employe not exist");
+			   }
 			   
 			   break;
 		   }
